@@ -28,14 +28,22 @@
 							<th>Phone</th>
 							<th>Email</th>
 							<th>Formula</th>
+							<th>Action</th>
 						</tr>
 						<c:forEach var="tempClient" items="${clients}">
+						
+						<c:url var="updateLink" value="/client/showFormUpdate">
+							<c:param name="clientId" value="${tempClient.id }"/>
+						</c:url>
 							<tr>
 								<td> ${tempClient.lastName} </td>
 								<td> ${tempClient.firstName} </td>
 								<td> ${tempClient.phone} </td>
 								<td> ${tempClient.email} </td>
 								<td> ${tempClient.formula} </td>
+								<td> 
+									<a href="${updateLink}">Update</a>
+								</td>
 							</tr>
 						</c:forEach>	
 					</table>
