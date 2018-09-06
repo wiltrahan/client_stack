@@ -35,6 +35,10 @@
 						<c:url var="updateLink" value="/client/showFormUpdate">
 							<c:param name="clientId" value="${tempClient.id }"/>
 						</c:url>
+						
+						<c:url var="deleteLink" value="/client/delete">
+							<c:param name="clientId" value="${tempClient.id }"/>
+						</c:url>
 							<tr>
 								<td> ${tempClient.lastName} </td>
 								<td> ${tempClient.firstName} </td>
@@ -43,6 +47,9 @@
 								<td> ${tempClient.formula} </td>
 								<td> 
 									<a href="${updateLink}">Update</a>
+									|
+									<a href="${deleteLink}"
+									onclick="if (!(confirm('Are you sure you want to delete this client?'))) return false">Delete</a>
 								</td>
 							</tr>
 						</c:forEach>	
