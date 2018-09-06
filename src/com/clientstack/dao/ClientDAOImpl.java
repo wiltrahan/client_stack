@@ -62,11 +62,35 @@ public class ClientDAOImpl implements ClientDAO {
 		Session currentSession = sessionFactory.getCurrentSession();
 		
 		// delete object with Id
-		Query theQuery = currentSession.createQuery("delete from Client where id=:clientId");
+		Query<?> theQuery = currentSession.createQuery("delete from Client where id=:clientId");
 		
 		theQuery.setParameter("clientId", theId);
 		
 		theQuery.executeUpdate();
 			
+	}
+
+	@Override
+	public List<Client> searchClients(String theSearchName) {
+		
+		// get the current session
+		Session currentSession = sessionFactory.getCurrentSession();
+		
+		Query<Client> theQuery = null;
+		
+		// only search by the name if theSearchName is not empty
+		if(theSearchName != null && theSearchName.trim().length() > 0) {
+			
+			// search for firstName or lastName...case insensitive 
+			theQuery = currentSession.createQuery("from Client where lower(firstName) like :theName or lower(lastName) like :theName", Client.class);
+			theQuery.setParameter("theName", "%" + theSearchName.toLowerCase() + "%");
+		} else {
+			// the search name is empty, get all clients
+			theQuery = currentSession.createQuery("from Client", Client.class);
+		}
+		// execute query and get result list
+		List<Client> clients = theQuery.getResultList();
+		
+		return clients;
 	}
 }
