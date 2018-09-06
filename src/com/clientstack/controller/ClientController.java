@@ -51,7 +51,6 @@ public class ClientController {
 		// save client using the service
 		clientService.saveClient(theClient);
 		
-		
 		return "redirect:/client/list";
 		
 	}
