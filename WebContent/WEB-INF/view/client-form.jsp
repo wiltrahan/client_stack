@@ -62,7 +62,6 @@
 		
 		<p>
 			<a href="${pageContext.request.contextPath}/client/list">Back To List</a>
-		
 		</p>
 		
 		

@@ -6,4 +6,6 @@ import com.clientstack.entity.Client;
 
 public interface ClientDAO {
 	public List<Client> getClients();
+
+	public void saveClient(Client theClient);
 }
