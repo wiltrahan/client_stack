@@ -5,15 +5,14 @@
 <html>
 <head>
 	<title>List Clients</title>
+	<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css"/>
 </head>
 <body>
 
 	<div id="wrapper">
-		
 		<div id="header">
 			<h2>Client Stack</h2>
 		</div>	
-			
 			<div id="container">
 				<div id="content">
 					<table>
@@ -36,7 +35,7 @@
 					</table>
 				</div>
 			</div>
-	</div>
+		</div>
 	
 	
 </body>
