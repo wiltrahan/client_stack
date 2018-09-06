@@ -7,8 +7,6 @@ import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
-
 import com.clientstack.entity.Client;
 
 @Repository
@@ -19,7 +17,6 @@ public class ClientDAOImpl implements ClientDAO {
 	private SessionFactory sessionFactory;
 	
 	@Override
-	@Transactional
 	public List<Client> getClients() {
 		
 		// get the current hibernate session
