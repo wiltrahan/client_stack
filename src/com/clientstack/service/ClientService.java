@@ -16,4 +16,6 @@ public interface ClientService {
 
 	public List<Client> searchClients(String theSearchName);
 	
+	public Client showClient(int theId);
+	
 }

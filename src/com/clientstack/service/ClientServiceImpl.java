@@ -51,4 +51,11 @@ public class ClientServiceImpl implements ClientService {
 		return clientDAO.searchClients(theSearchName);
 	}
 
+
+	@Override
+	@Transactional
+	public Client showClient(int theId) {
+		return clientDAO.showClient(theId);
+	}
+
 }

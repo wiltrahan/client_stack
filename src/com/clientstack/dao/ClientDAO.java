@@ -14,4 +14,6 @@ public interface ClientDAO {
 	public void deleteClient(int theId);
 
 	public List<Client> searchClients(String theSearchName);
+
+	public Client showClient(int theId);
 }

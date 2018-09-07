@@ -90,5 +90,16 @@ public class ClientController {
 		return "list-clients";
 	}
 	
+	@GetMapping("/showClient")
+	public String showClient(@RequestParam("clientId") int theId, Model theModel)  {
+		
+		Client theClient = clientService.getClient(theId);
+		
+		theModel.addAttribute("client", theClient);
+		
+		return "show-client";
+		
+	}
+	
 	
 }

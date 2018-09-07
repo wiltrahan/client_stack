@@ -19,8 +19,7 @@
 				
 					<input type="button" value="Add Client" 
 						onclick="window.location.href='showFormForAdd'; return false;"
-						class="add-button"
-					/>
+						class="add-button"/>
 					
 					<!-- Search box -->
 					<form:form action="search" method="POST">
@@ -39,6 +38,10 @@
 						</tr>
 						<c:forEach var="tempClient" items="${clients}">
 						
+						<c:url var="clientLink" value="/client/showClient">
+							<c:param name="clientId" value="${tempClient.id }"/>
+						</c:url>
+						
 						<c:url var="updateLink" value="/client/showFormUpdate">
 							<c:param name="clientId" value="${tempClient.id }"/>
 						</c:url>
@@ -53,6 +56,8 @@
 								<td> ${tempClient.email} </td>
 								<td> ${tempClient.formula} </td>
 								<td> 
+									<a href="${clientLink}">More</a>
+									|
 									<a href="${updateLink}">Update</a>
 									|
 									<a href="${deleteLink}"
@@ -62,6 +67,7 @@
 						</c:forEach>	
 					</table>
 				</div>
+					
 			</div>
 		</div>
 </body>
