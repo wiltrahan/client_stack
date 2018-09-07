@@ -19,8 +19,8 @@
 			<div id="content">
 				<table>
 						<tr>
-							<th>Last Name</th>
 							<th>First Name</th>
+							<th>Last Name</th>
 							<th>Phone</th>
 							<th>Email</th>
 							<th>Formula</th>
@@ -36,8 +36,8 @@
 							<c:param name="clientId" value="${client.id}"/>
 						</c:url>
 							<tr>
-								<td> ${client.lastName} </td>
 								<td> ${client.firstName} </td>
+								<td> ${client.lastName} </td>
 								<td> ${client.phone} </td>
 								<td> ${client.email} </td>
 								<td> ${client.formula} </td>

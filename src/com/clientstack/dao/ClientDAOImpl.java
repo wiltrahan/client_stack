@@ -86,7 +86,7 @@ public class ClientDAOImpl implements ClientDAO {
 			theQuery.setParameter("theName", "%" + theSearchName.toLowerCase() + "%");
 		} else {
 			// the search name is empty, get all clients
-			theQuery = currentSession.createQuery("from Client", Client.class);
+			theQuery = currentSession.createQuery("from Client order by lastName", Client.class);
 		}
 		// execute query and get result list
 		List<Client> clients = theQuery.getResultList();

@@ -29,11 +29,9 @@
 					
 					<table>
 						<tr>
-							<th>Last Name</th>
 							<th>First Name</th>
+							<th>Last Name</th>
 							<th>Phone</th>
-							<th>Email</th>
-							<th>Formula</th>
 							<th>Action</th>
 						</tr>
 						<c:forEach var="tempClient" items="${clients}">
@@ -50,11 +48,9 @@
 							<c:param name="clientId" value="${tempClient.id }"/>
 						</c:url>
 							<tr>
-								<td> ${tempClient.lastName} </td>
 								<td> ${tempClient.firstName} </td>
+								<td> ${tempClient.lastName} </td>
 								<td> ${tempClient.phone} </td>
-								<td> ${tempClient.email} </td>
-								<td> ${tempClient.formula} </td>
 								<td> 
 									<a href="${clientLink}">More</a>
 									|
