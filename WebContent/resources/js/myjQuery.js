@@ -8,4 +8,12 @@ $(document).ready(function() {
 
         $('#textarea_feedback').html(text_remaining + ' characters remaining');
     });
+    
+    $(function(){
+        $("#last_appt").datepicker();
+    });
+    
+    $(function(){
+        $("#next_appt").datepicker();
+    });
 });

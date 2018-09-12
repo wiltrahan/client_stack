@@ -13,7 +13,9 @@
 		  rel="stylesheet"
 		  href="${pageContext.request.contextPath}/resources/css/add-client-style.css">
 		  
-		  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 	
 	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/myjQuery.js"/></script>
 	
@@ -56,12 +58,12 @@
 						<td><form:input path="email"/></td>
 					</tr>
 					<tr>
-						<td><label>Last Appointment:</label></td>
-						<td><form:input path="lastAppt"/></td>
+						<td><label>Last Appointment (Click for calendar):</label></td>
+						<td><form:input path="lastAppt" type="text" id="last_appt"/></td>
 					</tr>
 					<tr>
-						<td><label>Next Appointment</label></td>
-						<td><form:input path="nextAppt"/></td>
+						<td><label>Next Appointment (Click for calendar):</label></td>
+						<td><form:input path="nextAppt" type="text" id="next_appt"/></td>
 					</tr>
 					<tr>
 						<td><label>Service:</label></td>
