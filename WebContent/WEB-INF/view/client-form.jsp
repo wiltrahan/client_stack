@@ -56,6 +56,14 @@
 						<td><form:input path="email"/></td>
 					</tr>
 					<tr>
+						<td><label>Last Appointment:</label></td>
+						<td><form:input path="lastAppt"/></td>
+					</tr>
+					<tr>
+						<td><label>Next Appointment</label></td>
+						<td><form:input path="nextAppt"/></td>
+					</tr>
+					<tr>
 						<td><label>Service:</label></td>
 						<td><form:textarea path="service" id="textarea" rows="7" cols="34" maxlength="255"/></td>
 						<td id="textarea_feedback"></td>

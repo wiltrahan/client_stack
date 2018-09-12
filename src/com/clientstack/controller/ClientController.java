@@ -1,10 +1,13 @@
 package com.clientstack.controller;
 
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -100,6 +103,12 @@ public class ClientController {
 		return "show-client";
 		
 	}
+	
+	public void initBinder(WebDataBinder binder){
+        SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
+        sdf.setLenient(true);
+        binder.registerCustomEditor(Client.class, new CustomDateEditor(sdf, true));
+    }
 	
 	
 }

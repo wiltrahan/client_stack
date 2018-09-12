@@ -2,12 +2,16 @@ package com.clientstack.entity;
 
 
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 @Table(name="client")
@@ -32,6 +36,14 @@ public class Client {
 	
 	@Column(name="service")
 	private String service;
+	
+	@Temporal(TemporalType.DATE)
+	@Column(name="lastAppt")
+	private Date lastAppt;
+	
+	@Temporal(TemporalType.DATE)
+	@Column(name="nextAppt")
+	private Date nextAppt;
 	
 	public Client() {
 		
@@ -84,12 +96,21 @@ public class Client {
 	public void setService(String service) {
 		this.service = service;
 	}
-	
 
-	@Override
-	public String toString() {
-		return "Client [id=" + id + ", lastName=" + lastName + ", firstName=" + firstName + ", phone=" + phone
-				+ ", email=" + email + ", service=" + service + "]";
+	public Date getLastAppt() {
+		return lastAppt;
+	}
+
+	public void setLastAppt(Date lastAppt) {
+		this.lastAppt = lastAppt;
+	}
+
+	public Date getNextAppt() {
+		return nextAppt;
+	}
+
+	public void setNextAppt(Date nextAppt) {
+		this.nextAppt = nextAppt;
 	}
 	
 	
