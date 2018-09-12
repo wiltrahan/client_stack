@@ -12,6 +12,11 @@
 	<link type="text/css"
 		  rel="stylesheet"
 		  href="${pageContext.request.contextPath}/resources/css/add-client-style.css">
+		  
+		  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	
+	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/myjQuery.js"/></script>
+	
 		
 
 </head>
@@ -51,8 +56,9 @@
 						<td><form:input path="email"/></td>
 					</tr>
 					<tr>
-						<td><label>Formula:</label></td>
-						<td><form:input path="formula"/></td>
+						<td><label>Service:</label></td>
+						<td><form:textarea path="service" id="textarea" rows="7" cols="34" maxlength="255"/></td>
+						<td id="textarea_feedback"></td>
 					</tr>
 					<tr>
 						<td><label></label></td>
@@ -64,15 +70,8 @@
 		
 		<div style="clear; both;"></div>
 		
-		<p>
-			<a href="${pageContext.request.contextPath}/client/list">Back To List</a>
-		</p>
-		
-		
-		
+		<p> <a href="${pageContext.request.contextPath}/client/list">Back To List</a> </p>		
 	</div>
 
 </body>
-
-
 </html>

@@ -1,5 +1,7 @@
 package com.clientstack.entity;
 
+
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -28,8 +30,8 @@ public class Client {
 	@Column(name="email")
 	private String email;
 	
-	@Column(name="formula")
-	private String formula;
+	@Column(name="service")
+	private String service;
 	
 	public Client() {
 		
@@ -75,18 +77,19 @@ public class Client {
 		this.email = email;
 	}
 
-	public String getFormula() {
-		return formula;
+	public String getService() {
+		return service;
 	}
 
-	public void setFormula(String formula) {
-		this.formula = formula;
+	public void setService(String service) {
+		this.service = service;
 	}
+	
 
 	@Override
 	public String toString() {
 		return "Client [id=" + id + ", lastName=" + lastName + ", firstName=" + firstName + ", phone=" + phone
-				+ ", email=" + email + ", formula=" + formula + "]";
+				+ ", email=" + email + ", service=" + service + "]";
 	}
 	
 	

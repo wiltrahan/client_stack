@@ -24,7 +24,7 @@
 						<th>Last Name</th>
 						<th>Phone</th>
 						<th>Email</th>
-						<th>Formula</th>
+						<th>Service</th>
 						<th>Action</th>
 					</tr>
 					
@@ -40,7 +40,7 @@
 						<td> ${client.lastName} </td>
 						<td> ${client.phone} </td>
 						<td> ${client.email} </td>
-						<td> ${client.formula} </td>
+						<td> ${client.service} </td>
 						<td> 
 							<a href="${updateLink}">Update</a>
 							|
@@ -48,13 +48,12 @@
 						</td>
 					</tr>
 				</table>
+		
 			</div>
 			
 			<p> <a href="${pageContext.request.contextPath}/client/list">Back To List</a> </p>
 		
 		</div>
 	</div>
-	
 </body>
-
 </html>
