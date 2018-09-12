@@ -25,6 +25,8 @@
 						<th>Phone</th>
 						<th>Email</th>
 						<th>Service</th>
+						<th>Last</th>
+						<th>Next</th>
 						<th>Action</th>
 					</tr>
 					
@@ -41,6 +43,8 @@
 						<td> ${client.phone} </td>
 						<td> ${client.email} </td>
 						<td> ${client.service} </td>
+						<td> ${client.lastAppt} </td>
+						<td> ${client.nextAppt} </td>
 						<td> 
 							<a href="${updateLink}">Update</a>
 							|
