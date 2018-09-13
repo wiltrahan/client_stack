@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.TimeZone;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
@@ -66,10 +67,13 @@ public class ClientController {
 		// save client using the service
 		clientService.saveClient(theClient);
 		
-		return "redirect:/client/list";
+		//int theId = theClient.getId();
 		
+		return "redirect:/client/showClient";
 	}
 	
+
+
 	@GetMapping("/showFormUpdate")
 	public String showFormUpdate(@RequestParam("clientId") int theId, Model theModel) {
 		

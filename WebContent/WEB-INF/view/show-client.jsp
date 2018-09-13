@@ -18,17 +18,7 @@
 		<div id="container">
 			<div id="content">
 				
-				<table>
-					<tr>
-						<th>First Name</th>
-						<th>Last Name</th>
-						<th>Phone</th>
-						<th>Email</th>
-						<th>Service</th>
-						<th>Last</th>
-						<th>Next</th>
-						<th>Action</th>
-					</tr>
+				
 					
 					<c:url var="updateLink" value="/client/showFormUpdate">
 						<c:param name="clientId" value="${client.id}"/>
@@ -37,21 +27,19 @@
 						<c:param name="clientId" value="${client.id}"/>
 					</c:url>
 					
-					<tr>
-						<td> ${client.firstName} </td>
-						<td> ${client.lastName} </td>
-						<td> ${client.phone} </td>
-						<td> ${client.email} </td>
-						<td> ${client.service} </td>
-						<td> ${client.lastAppt} </td>
-						<td> ${client.nextAppt} </td>
-						<td> 
-							<a href="${updateLink}">Update</a>
-							|
-							<a href="${deleteLink}" onclick="if (!(confirm('Are you sure you want to delete this client?'))) return false">Delete</a>
-						</td>
-					</tr>
-				</table>
+					
+				
+				<ul>
+					<li>Name: ${client.firstName} ${client.lastName} </li>
+					<li>Phone: ${client.phone}</li>
+					<li>Email: ${client.email}</li>
+					<li>Last Appointment: ${client.lastAppt}</li>
+					<li>Next Appointment ${client.nextAppt}</li>
+					<li>Services ${client.service}</li>
+					<li><a href="${updateLink}">Update</a></li>
+					<li><a href="${deleteLink}" onclick="if (!(confirm('Are you sure you want to delete this client?'))) return false">Delete</a></li>
+				
+				</ul>
 		
 			</div>
 			
