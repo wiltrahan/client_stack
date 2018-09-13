@@ -8,27 +8,28 @@ table {
 	border-collapse:collapse;
 	border-bottom:1px solid gray;
 	font-family: Tahoma,Verdana,Segoe,sans-serif;
-	width:72%;
+	width:100%;
 }
  
 th {
 	border-bottom:1px solid gray;
-	background:none repeat scroll 0 0 #09c332;
+	background:none repeat scroll 0 0 #EC57B8;
 	padding:10px;
 	color: #FFFFFF;
 }
 
 tr {
 	border-top:1px solid gray;
-	text-align:center;	
+	text-align:center;
+	background-color: blue;	
 }
  
 tr:nth-child(even) {background: #FFFFFF}
 tr:nth-child(odd) {background: #BBBBBB}	
  
 #wrapper {width: 100%; margin-top: 0px; }
-#header {width: 70%; background: #09c332; margin-top: 0px; padding:15px 0px 15px 15px;}
-#header h2 {width: 100%; margin:auto; color: #FFFFFF;}
+#page-header {width: 100%; background: #09c332; margin-top: 0px; padding:15px 0px 15px 15px;}
+#page-header h2 {width: 100%; margin:auto; color: #FFFFFF;}
 #container {width: 100%; margin:auto}
 #container h3 {color: #000;}
 #container #content {margin-top: 20px;}
@@ -44,4 +45,12 @@ tr:nth-child(odd) {background: #BBBBBB}
 	
 	margin-bottom: 15px;
 	background: #cccccc;
+}
+
+#client-info-list {
+	list-style-type: none;
+}
+
+.client-info-header {
+	font-weight: bold;
 }

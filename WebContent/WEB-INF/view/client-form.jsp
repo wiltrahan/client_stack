@@ -5,6 +5,11 @@
 <html>
 <head>
 	<title>Save Client</title>
+	
+	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	
 	<link type="text/css"
 		  rel="stylesheet"
 		  href="${pageContext.request.contextPath}/resources/css/style.css">
@@ -12,6 +17,8 @@
 	<link type="text/css"
 		  rel="stylesheet"
 		  href="${pageContext.request.contextPath}/resources/css/add-client-style.css">
+	
+	
 		  
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
@@ -25,11 +32,12 @@
 
 <body>
 	
-	<div id="wrapper">
-		<div id="header">
-			<h2>Client Stack</h2>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<h2 class="text-center">Client Stack</h2>
+			
 		</div>
-	</div>
+	</nav>
 	
 	<div id="container">
 		<h3>Save Client</h3>

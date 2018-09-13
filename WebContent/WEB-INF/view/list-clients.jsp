@@ -6,33 +6,42 @@
 <html>
 <head>
 	<title>List Clients</title>
+	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css"/>
 </head>
 <body>
 
-	<div id="wrapper">
-		<div id="header">
-			<h2>Client Stack</h2>
-		</div>	
-			<div id="container">
-				<div id="content">
-				
-					<input type="button" value="Add Client" 
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<h2 class="text-center">Client Stack</h2>
+			
+			<!-- Search box -->
+			<div class="form-group">
+					<form:form action="search" method="POST" class="navbar-form navbar-left">
+						<input type="text" name="theSearchName" class="form-control" placeholder="Search"/>
+						<input type="submit" value="Search" class="btn btn-default"/>
+					</form:form>
+			</div>
+			
+			<input type="button" class="btn btn-default" value="Add Client" 
 						onclick="window.location.href='showFormForAdd'; return false;"
 						class="add-button"/>
-					
-					<!-- Search box -->
-					<form:form action="search" method="POST">
-						Search Client: <input type="text" name="theSearchName"/>
-						<input type="submit" value="Search" class="add-button"/>
-					</form:form>
-					
+		</div>
+	</nav>
+
+	<div id="wrapper">
+			
+			<div class="container" >
+				<div id="content" class="row">
+				
 					<table>
 						<tr>
-							<th>First Name</th>
-							<th>Last Name</th>
-							<th>Phone</th>
-							<th>Action</th>
+							<th class="text-center">First Name</th>
+							<th class="text-center">Last Name</th>
+							<th class="text-center">Phone</th>
+							<th class="text-center">Action</th>
 						</tr>
 						<c:forEach var="tempClient" items="${clients}">
 						
@@ -55,9 +64,7 @@
 									<a href="${clientLink}">More</a>
 									|
 									<a href="${updateLink}">Update</a>
-									|
-									<a href="${deleteLink}"
-									onclick="if (!(confirm('Are you sure you want to delete this client?'))) return false">Delete</a>
+									
 								</td>
 							</tr>
 						</c:forEach>	
