@@ -24,12 +24,12 @@
 	</c:url>
 	
 	<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-        <a class="navbar-brand" href="#">Client Stack</a>
-    </div> 
-  </div>
-</nav>
+  		<div class="container-fluid">
+    		<div class="navbar-header">
+        		<a class="navbar-brand" href="${pageContext.request.contextPath}/client/list">Client Stack</a>
+    		</div> 
+  		</div>
+	</nav>
 		
 		<div id="container">
 			<div id="content">		
@@ -47,10 +47,10 @@
 			<div class="row">
 			 <div class="col-sm-3">
 			
-			<p><a href="${pageContext.request.contextPath}/client/list" class="btn btn-success btn-md custom-btn" role="button">Back</a></p>
-			<p><a href="${updateLink}" class="btn btn-warning btn-md custom-btn" role="button">Update</a></p>
+			<p><a href="${pageContext.request.contextPath}/client/list" class="btn btn-success btn-md custom-btn" role="button">Back To List</a></p>
+			<p><a href="${updateLink}" class="btn btn-warning btn-md custom-btn" role="button">Update Client</a></p>
 			<p><a href="${deleteLink}" class="btn btn-danger btn-md custom-btn" role="button" 
-				onclick="if (!(confirm('Are you sure you want to delete this client?'))) return false">Delete
+				onclick="if (!(confirm('Are you sure you want to delete this client?'))) return false">Delete Client
 			</a></p>
 			</div>
 			</div>

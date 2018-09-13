@@ -33,14 +33,15 @@
 <body>
 	
 	<nav class="navbar navbar-default">
-		<div class="container-fluid">
-			<h2 class="text-center">Client Stack</h2>
-			
-		</div>
+  		<div class="container-fluid">
+    		<div class="navbar-header">
+        		<a class="navbar-brand" href="${pageContext.request.contextPath}/client/list">Client Stack</a>
+    		</div> 
+  		</div>
 	</nav>
 	
 	<div id="container">
-		<h3>Save Client</h3>
+		<h3>Client Information</h3>
 		
 		<form:form action="saveClient" modelAttribute="client" method="post">
 		
