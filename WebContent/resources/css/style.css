@@ -54,3 +54,7 @@ tr:nth-child(odd) {background: #BBBBBB}
 .client-info-header {
 	font-weight: bold;
 }
+.custom-btn {
+	width:65px;
+    padding:5px;
+}

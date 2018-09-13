@@ -7,7 +7,6 @@
 <head>
 	<title>List Clients</title>
 	
-	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css"/>
 </head>
@@ -15,19 +14,18 @@
 
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
-			<h2 class="text-center">Client Stack</h2>
-			
-			<!-- Search box -->
-			<div class="form-group">
-					<form:form action="search" method="POST" class="navbar-form navbar-left">
-						<input type="text" name="theSearchName" class="form-control" placeholder="Search"/>
-						<input type="submit" value="Search" class="btn btn-default"/>
-					</form:form>
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Client Stack</a>
 			</div>
-			
-			<input type="button" class="btn btn-default" value="Add Client" 
-						onclick="window.location.href='showFormForAdd'; return false;"
-						class="add-button"/>
+				<form:form class="navbar-form navbar-right" action="search" method="POST">
+					<div class="form-group">
+						<input type="text" name="theSearchName" class="form-control" placeholder="Search"/>
+					</div>
+					<input type="submit" value="Search" class="btn btn-default"/>
+					<input type="button" value="Add New Client" 
+						onclick="window.location.href='showFormForAdd'; return false;" class="btn btn-default"/>
+				</form:form>
+				
 		</div>
 	</nav>
 
