@@ -62,14 +62,14 @@ public class ClientController {
 	}
 	
 	@PostMapping("/saveClient")
-	public String saveClient(@ModelAttribute("client") Client theClient) {
+	public String saveClient(@ModelAttribute("client") Client theClient, Model theModel) {
 		
 		// save client using the service
 		clientService.saveClient(theClient);
 		
-		//int theId = theClient.getId();
-		
-		return "redirect:/client/showClient";
+		theModel.addAttribute("client", theClient);
+
+		return "show-client";
 	}
 	
 

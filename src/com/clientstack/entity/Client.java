@@ -113,6 +113,4 @@ public class Client {
 		this.nextAppt = nextAppt;
 	}
 	
-	
-	
 }

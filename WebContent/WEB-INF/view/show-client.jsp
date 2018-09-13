@@ -1,4 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
+
 
 
 <!DOCTYPE html>
@@ -33,9 +35,9 @@
 					<li>Name: ${client.firstName} ${client.lastName} </li>
 					<li>Phone: ${client.phone}</li>
 					<li>Email: ${client.email}</li>
-					<li>Last Appointment: ${client.lastAppt}</li>
-					<li>Next Appointment ${client.nextAppt}</li>
-					<li>Services ${client.service}</li>
+					<li>Last Appointment: <fmt:formatDate value="${client.lastAppt}" type="date"/></li>
+					<li>Next Appointment: <fmt:formatDate value="${client.nextAppt}" type="date"/> </li>
+					<li>Services: ${client.service}</li>
 					<li><a href="${updateLink}">Update</a></li>
 					<li><a href="${deleteLink}" onclick="if (!(confirm('Are you sure you want to delete this client?'))) return false">Delete</a></li>
 				
