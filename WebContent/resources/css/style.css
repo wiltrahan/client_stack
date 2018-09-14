@@ -47,6 +47,10 @@ tr:nth-child(odd) {background: #BBBBBB}
 	background: #cccccc;
 }
 
+.custom-nav {
+	background-color: #EFD7E6;
+}
+
 #client-info-list {
 	list-style-type: none;
 }

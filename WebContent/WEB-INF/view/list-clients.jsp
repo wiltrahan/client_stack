@@ -1,30 +1,33 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
-<!DOCTYPE html>
+<!doctype html>
 
-<html>
+<html lang="en">
 <head>
 	<title>List Clients</title>
 	
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 	<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css"/>
 </head>
 <body>
 
-	<nav class="navbar navbar-default">
+	<nav class="navbar navbar-default custom-nav">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<a class="navbar-brand" href="#">Client Stack</a>
 			</div>
-				<form:form class="navbar-form navbar-right" action="search" method="POST">
-					<div class="form-group">
-						<input type="text" name="theSearchName" class="form-control" placeholder="Search"/>
-					</div>
-					<input type="submit" value="Search" class="btn btn-default"/>
-					<input type="button" value="Add New Client" 
-						onclick="window.location.href='showFormForAdd'; return false;" class="btn btn-default"/>
+				<form:form class="form-inline my-2 my-lg-0" action="search" method="POST">
+					
+						<input type="text" name="theSearchName" class="form-control mr-sm-2" placeholder="Search"/>
+						<!-- <input type="submit" value="Search" class="btn btn-default"/> -->
+						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+					
 				</form:form>
+				<!-- <input type="button" value="Add Client" 
+						onclick="window.location.href='showFormForAdd'; return false;" class="btn btn-default"/> -->
+				<button class="btn btn-outline-success my-2 my-sm-0" onclick="window.location.href='showFormForAdd'; return false;">Add New Client</button>
 				
 		</div>
 	</nav>
