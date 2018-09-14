@@ -22,10 +22,10 @@
 					
 						<input type="text" name="theSearchName" class="form-control mr-sm-2" placeholder="Search"/>
 	
-						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+						<button class="btn btn-outline-success search-btn my-2 my-sm-0" type="submit">Search</button>
 					
 				</form:form>
-				<button class="btn btn-outline-success my-2 my-sm-0" onclick="window.location.href='showFormForAdd'; return false;">Add New Client</button>
+				<button class="btn btn-outline-success add-new-btn my-2 my-sm-0" onclick="window.location.href='showFormForAdd'; return false;">Add New Client</button>
 				
 		</div>
 	</nav>
@@ -35,13 +35,13 @@
 			<div class="container" >
 				<div id="content" class="row">
 				
-					<table class="table table-striped table-bordered table-sm">
-					<thead>
+					<table class="table table-striped table-borderless table-sm">
+					<thead id="custom-thead">
 							<tr>
-								<th scope="col">First Name</th>
-								<th scope="col">Last Name</th>
-								<th scope="col">Phone</th>
-								<th scope="col">Action</th>
+								<th scope="col" class="font-weight-light">First Name</th>
+								<th scope="col" class="font-weight-light">Last Name</th>
+								<th scope="col" class="font-weight-light">Phone</th>
+								<th scope="col" class="font-weight-light">Action</th>
 							</tr>
 						</thead>
 						<c:forEach var="tempClient" items="${clients}">

@@ -1,7 +1,8 @@
 html, body{
 	margin-left:15px; margin-right:15px; 
-	padding:0px; 
+	padding:2px; 
 	font-family:Verdana, Arial, Helvetica, sans-serif;
+	background-color: #F4F6F9;
 }
 
 table {   
@@ -13,7 +14,7 @@ table {
  
 th {
 	border-bottom:1px solid gray;
-	background:none repeat scroll 0 0 #EC57B8;
+	background:none repeat scroll 0 0 #A56B86;
 	padding:10px;
 	color: #FFFFFF;
 }
@@ -27,28 +28,20 @@ tr {
 tr:nth-child(even) {background: #FFFFFF}
 tr:nth-child(odd) {background: #BBBBBB}	
  
-#wrapper {width: 100%; margin-top: 0px; }
+#wrapper {width: 100%; margin-top: 10px; }
 #page-header {width: 100%; background: #09c332; margin-top: 0px; padding:15px 0px 15px 15px;}
 #page-header h2 {width: 100%; margin:auto; color: #FFFFFF;}
 #container {width: 100%; margin:auto}
 #container h3 {color: #000;}
 #container #content {margin-top: 20px;}
 
-.add-button {
-	border: 1px solid #666; 
-	border-radius: 5px; 
-	padding: 4px; 
-	font-size: 12px;
-	font-weight: bold;
-	width: 120px; 
-	padding: 5px 10px; 
-	
-	margin-bottom: 15px;
-	background: #cccccc;
-}
 
 .custom-nav {
-	background-color: #EFD7E6;
+	background-color: #734B5E;
+	box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.75);	
+}
+a.navbar-brand {
+	color: #E8E9ED;
 }
 
 #client-info-list {
@@ -59,7 +52,19 @@ tr:nth-child(odd) {background: #BBBBBB}
 	font-weight: bold;
 }
 
+.search-btn {
+	color: #F4F6F9
+}
+
+.add-new-btn {
+	color: #F4F6F9;
+}
+
 .custom-btn {
 	width: 125px;
     padding: 5px;
+}
+
+#custom-thead {
+	box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.75);	
 }

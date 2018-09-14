@@ -30,30 +30,27 @@
     		</div> 
   		</div>
 	</nav>
+	<div id="wrapper">
 		
 		<div id="container">
-			<div id="content">		
-				<ul id="client-info-list">
-					<li><span class="client-info-header">Name:</span> ${client.firstName} ${client.lastName} </li>
-					<li><span class="client-info-header">Phone:</span> ${client.phone}</li>
-					<li><span class="client-info-header">Email:</span> ${client.email}</li>
-					<li><span class="client-info-header">Last Appointment:</span> <fmt:formatDate value="${client.lastAppt}" type="date" pattern="EEEE, MMMM dd, yyyy"/></li>
-					<li><span class="client-info-header">Next Appointment:</span> <fmt:formatDate value="${client.nextAppt}" type="date" pattern="EEEE, MMMM dd, yyyy"/> </li>
-					<li><span class="client-info-header">Services:</span> ${client.service}</li>
-				</ul>
-		
-			</div>
-			
-			<div class="row">
-			 <div class="col-sm-3">
-			
-			<p><a href="${pageContext.request.contextPath}/client/list" class="btn btn-success btn-md custom-btn" role="button">Back To List</a></p>
-			<p><a href="${updateLink}" class="btn btn-warning btn-md custom-btn" role="button">Update Client</a></p>
-			<p><a href="${deleteLink}" class="btn btn-danger btn-md custom-btn" role="button" 
-				onclick="if (!(confirm('Are you sure you want to delete this client?'))) return false">Delete Client
-			</a></p>
-			</div>
-			</div>
+		<div class="card">
+  			<div class="card-body">
+    			<h5 class="card-title">${client.firstName} ${client.lastName}</h5>
+    			<h6 class="card-subtitle mb-2 text-muted">${client.phone}</h6>
+    			<h6 class="card-subtitle mb-2 text-muted">${client.email}</h6>
+    			<h6 class="card-subtitle mb-2 text-muted">Last Appointment: <fmt:formatDate value="${client.lastAppt}" type="date" pattern="EEEE, MMMM dd, yyyy"/></h6>
+    			<h6 class="card-subtitle mb-2 text-muted">Next Appointment: <fmt:formatDate value="${client.nextAppt}" type="date" pattern="EEEE, MMMM dd, yyyy"/></h6>
+   				 <p class="card-text">${client.service}</p>
+    			 <a href="${pageContext.request.contextPath}/client/list" class="btn btn-outline-secondary custom-btn" role="button">Back To List</a>
+    			 <a href="${updateLink}" class="btn btn-outline-secondary custom-btn" role="button">Update Client</a>
+    			 <a href="${deleteLink}" class="btn btn-outline-danger custom-btn" role="button" 
+					onclick="if (!(confirm('Are you sure you want to delete this client?'))) return false">Delete Client
+				</a>
+  			</div>
 		</div>
+			
+		</div>
+		</div>
+		
 </body>
 </html>
