@@ -1,14 +1,14 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
-<head>
+<head lang="en">
 	<title>Save Client</title>
 	
 	
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 	
 	<link type="text/css"
 		  rel="stylesheet"
@@ -32,7 +32,7 @@
 
 <body>
 	
-	<nav class="navbar navbar-default">
+	<nav class="navbar navbar-default custom-nav">
   		<div class="container-fluid">
     		<div class="navbar-header">
         		<a class="navbar-brand" href="${pageContext.request.contextPath}/client/list">Client Stack</a>

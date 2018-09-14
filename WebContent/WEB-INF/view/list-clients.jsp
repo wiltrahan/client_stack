@@ -16,17 +16,15 @@
 	<nav class="navbar navbar-default custom-nav">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="#">Client Stack</a>
+				<a class="navbar-brand" href="${pageContext.request.contextPath}/client/list">Client Stack</a>
 			</div>
 				<form:form class="form-inline my-2 my-lg-0" action="search" method="POST">
 					
 						<input type="text" name="theSearchName" class="form-control mr-sm-2" placeholder="Search"/>
-						<!-- <input type="submit" value="Search" class="btn btn-default"/> -->
+	
 						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
 					
 				</form:form>
-				<!-- <input type="button" value="Add Client" 
-						onclick="window.location.href='showFormForAdd'; return false;" class="btn btn-default"/> -->
 				<button class="btn btn-outline-success my-2 my-sm-0" onclick="window.location.href='showFormForAdd'; return false;">Add New Client</button>
 				
 		</div>
@@ -37,13 +35,15 @@
 			<div class="container" >
 				<div id="content" class="row">
 				
-					<table>
-						<tr>
-							<th class="text-center">First Name</th>
-							<th class="text-center">Last Name</th>
-							<th class="text-center">Phone</th>
-							<th class="text-center">Action</th>
-						</tr>
+					<table class="table table-striped table-bordered table-sm">
+					<thead>
+							<tr>
+								<th scope="col">First Name</th>
+								<th scope="col">Last Name</th>
+								<th scope="col">Phone</th>
+								<th scope="col">Action</th>
+							</tr>
+						</thead>
 						<c:forEach var="tempClient" items="${clients}">
 						
 						<c:url var="clientLink" value="/client/showClient">
@@ -57,6 +57,7 @@
 						<c:url var="deleteLink" value="/client/delete">
 							<c:param name="clientId" value="${tempClient.id }"/>
 						</c:url>
+						<tbody>
 							<tr>
 								<td> ${tempClient.firstName} </td>
 								<td> ${tempClient.lastName} </td>
@@ -68,6 +69,7 @@
 									
 								</td>
 							</tr>
+						</tbody>
 						</c:forEach>	
 					</table>
 				</div>		

@@ -3,14 +3,14 @@
 
 
 
-<!DOCTYPE html>
+<!doctype html>
 
-<html>
+<html lang="en">
 <head>
 	<title>Client Information</title>
 	
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 	<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css"/>
 </head>
 
@@ -23,7 +23,7 @@
 		<c:param name="clientId" value="${client.id}"/>
 	</c:url>
 	
-	<nav class="navbar navbar-default">
+	<nav class="navbar navbar-default custom-nav">
   		<div class="container-fluid">
     		<div class="navbar-header">
         		<a class="navbar-brand" href="${pageContext.request.contextPath}/client/list">Client Stack</a>
