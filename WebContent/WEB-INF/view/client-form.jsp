@@ -2,8 +2,8 @@
 
 <!doctype html>
 
-<html>
-<head lang="en">
+<html lang="en">
+<head>
 	<title>Save Client</title>
 	
 	

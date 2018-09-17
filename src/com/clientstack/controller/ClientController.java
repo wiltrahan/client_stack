@@ -119,5 +119,10 @@ public class ClientController {
 		return "show-client";
 		
 	}
+	
+	@GetMapping("/calendar")
+	public String showCalendar() {
+		return "calendar";
+	}
 
 }
