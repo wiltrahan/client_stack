@@ -31,26 +31,24 @@
   		</div>
 	</nav>
 	<div id="wrapper">
-		
 		<div id="container">
-		<div class="card">
-  			<div class="card-body">
-    			<h5 class="card-title">${client.firstName} ${client.lastName}</h5>
-    			<h6 class="card-subtitle mb-2 text-muted">${client.phone}</h6>
-    			<h6 class="card-subtitle mb-2 text-muted">${client.email}</h6>
-    			<h6 class="card-subtitle mb-2 text-muted">Last Appointment: <fmt:formatDate value="${client.lastAppt}" type="date" pattern="EEEE, MMMM dd, yyyy"/></h6>
-    			<h6 class="card-subtitle mb-2 text-muted">Next Appointment: <fmt:formatDate value="${client.nextAppt}" type="date" pattern="EEEE, MMMM dd, yyyy"/></h6>
-   				 <p class="card-text">${client.service}</p>
-    			 <a href="${pageContext.request.contextPath}/client/list" class="btn btn-outline-secondary custom-btn" role="button">Back To List</a>
-    			 <a href="${updateLink}" class="btn btn-outline-secondary custom-btn" role="button">Update Client</a>
-    			 <a href="${deleteLink}" class="btn btn-outline-danger custom-btn" role="button" 
-					onclick="if (!(confirm('Are you sure you want to delete this client?'))) return false">Delete Client
-				</a>
-  			</div>
+			<div class="card">
+	  			<div class="card-body">
+	    			<h5 class="card-title">${client.firstName} ${client.lastName}</h5>
+	    			<h6 class="card-subtitle mb-2 text-muted">${client.phone}</h6>
+	    			<h6 class="card-subtitle mb-2 text-muted">${client.email}</h6>
+	    			<h6 class="card-subtitle mb-2 text-muted">Last Appointment: <fmt:formatDate value="${client.lastAppt}" type="date" pattern="EEEE, MMMM dd, yyyy"/></h6>
+	    			<h6 class="card-subtitle mb-2 text-muted">Next Appointment: <fmt:formatDate value="${client.nextAppt}" type="date" pattern="EEEE, MMMM dd, yyyy"/></h6>
+	   				 <p class="card-text">${client.service}</p>
+	    			 <a href="${pageContext.request.contextPath}/client/list" class="btn btn-outline-secondary custom-btn" role="button">Back To List</a>
+	    			 <a href="${updateLink}" class="btn btn-outline-secondary custom-btn" role="button">Update Client</a>
+	    			 <a href="${deleteLink}" class="btn btn-outline-danger custom-btn" role="button" 
+						onclick="if (!(confirm('Are you sure you want to delete ${client.firstName} ${client.lastName}?'))) return false">Delete Client
+					</a>
+	  			</div>
+			</div>
 		</div>
-			
-		</div>
-		</div>
+	</div>
 		
 </body>
 </html>
