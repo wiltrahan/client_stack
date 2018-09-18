@@ -1,6 +1,7 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!doctype html>
 
-<html lang= "en">
+<html lang="en">
 <head>
 	<title>Calendar</title>
 
@@ -31,6 +32,33 @@
 <body>
 
 	<div id="calendar"></div>
+	
+	<%-- <c:forEach var="tempClient" items="${clients}">
+	
+	
+	</c:forEach> --%>
+	
+	
+	<script>
+	
+		$(document).ready(function() {
+			
+			$('#calendar').fullCalendar({
+				
+				events: [
+					<c:forEach var="tempClient" items="${clients}">
+	    	    	{
+	    	      		title  : '${tempClient.firstName} ${tempClient.lastName}',
+	    	      		start  : '${tempClient.nextAppt}'
+	    	    	},
+	    	    	</c:forEach>
+	    	    	]
+				
+	    	});	
+			
+		});
+		
+	</script>
 
 </body>
 

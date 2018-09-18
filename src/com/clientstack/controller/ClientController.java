@@ -50,6 +50,18 @@ public class ClientController {
 		return "list-clients";
 	}
 	
+	@GetMapping("/calendar")
+	public String showCalendar(Model theModel) {
+		
+		// get clients from DAO
+		List<Client> theClients = clientService.getClients();
+		
+		// add clients to the model
+		theModel.addAttribute("clients", theClients);
+		
+		return "calendar";
+	}
+	
 	@GetMapping("/showFormForAdd")
 	public String showFormForAdd(Model theModel) {
 		
@@ -118,11 +130,6 @@ public class ClientController {
 		
 		return "show-client";
 		
-	}
-	
-	@GetMapping("/calendar")
-	public String showCalendar() {
-		return "calendar";
 	}
 
 }
