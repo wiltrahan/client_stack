@@ -30,29 +30,35 @@
 
 
 <body>
-
-	<div id="calendar"></div>
+	<nav class="navbar navbar-default custom-nav">
+  		<div class="container-fluid">
+    		<div class="navbar-header">
+        		<a class="navbar-brand" href="${pageContext.request.contextPath}/client/list">Client Stack</a>
+    		</div>
+    		<a href="${pageContext.request.contextPath}/client/list" class="btn btn-outline-success add-new-btn my-2 my-sm-0" role="button">Back To List</a>
+  		</div>
+	</nav>
 	
-	<%-- <c:forEach var="tempClient" items="${clients}">
-	
-	
-	</c:forEach> --%>
-	
-	
+	<div id="wrapper">
+		<div id="calendar"></div>
+	</div>
 	<script>
 	
 		$(document).ready(function() {
 			
 			$('#calendar').fullCalendar({
 				
+				defaultView : 'basicWeek',
 				events: [
 					<c:forEach var="tempClient" items="${clients}">
 	    	    	{
+	    	    		id 	   : '${tempClient.id}',
 	    	      		title  : '${tempClient.firstName} ${tempClient.lastName}',
-	    	      		start  : '${tempClient.nextAppt}'
-	    	    	},
+	    	      		start  : '${tempClient.nextAppt}',
+	    	      		url: '${pageContext.request.contextPath}/client/showClient?clientId=' + '${tempClient.id}'
+	    	      	},
 	    	    	</c:forEach>
-	    	    	]
+	    	    ] 
 				
 	    	});	
 			

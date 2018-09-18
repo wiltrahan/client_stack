@@ -26,7 +26,8 @@
 					
 				</form:form>
 				<button class="btn btn-outline-success add-new-btn my-2 my-sm-0" onclick="window.location.href='showFormForAdd'; return false;">Add New Client</button>
-				
+				<button class="btn btn-outline-success add-new-btn my-2 my-sm-0" onclick="window.location.href='calendar'; return false;">Calendar</button>
+								
 		</div>
 	</nav>
 
@@ -46,30 +47,30 @@
 						</thead>
 						<c:forEach var="tempClient" items="${clients}">
 						
-						<c:url var="clientLink" value="/client/showClient">
-							<c:param name="clientId" value="${tempClient.id }"/>
-						</c:url>
-						
-						<c:url var="updateLink" value="/client/showFormUpdate">
-							<c:param name="clientId" value="${tempClient.id }"/>
-						</c:url>
-						
-						<c:url var="deleteLink" value="/client/delete">
-							<c:param name="clientId" value="${tempClient.id }"/>
-						</c:url>
-						<tbody>
-							<tr>
-								<td> ${tempClient.firstName} </td>
-								<td> ${tempClient.lastName} </td>
-								<td> ${tempClient.phone} </td>
-								<td> 
-									<a href="${clientLink}">More</a>
-									|
-									<a href="${updateLink}">Update</a>
-									
-								</td>
-							</tr>
-						</tbody>
+							<c:url var="clientLink" value="/client/showClient">
+								<c:param name="clientId" value="${tempClient.id }"/>
+							</c:url>
+							
+							<c:url var="updateLink" value="/client/showFormUpdate">
+								<c:param name="clientId" value="${tempClient.id }"/>
+							</c:url>
+							
+							<c:url var="deleteLink" value="/client/delete">
+								<c:param name="clientId" value="${tempClient.id }"/>
+							</c:url>
+							<tbody>
+								<tr>
+									<td> ${tempClient.firstName} </td>
+									<td> ${tempClient.lastName} </td>
+									<td> ${tempClient.phone} </td>
+									<td> 
+										<a href="${clientLink}">More</a>
+										|
+										<a href="${updateLink}">Update</a>
+										
+									</td>
+								</tr>
+							</tbody>
 						</c:forEach>	
 					</table>
 				</div>		
