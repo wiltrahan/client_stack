@@ -11,5 +11,17 @@ $(document).ready(function() {
     
     $("#last_appt").datepicker();
     $("#next_appt").datepicker();
+    
+    $('.timepicker').timepicker({
+        timeFormat: 'h:mm p',
+        interval: 15,
+        minTime: '8',
+        maxTime: '9:00pm',
+        defaultTime: '8',
+        startTime: '8:00am',
+        dynamic: false,
+        dropdown: true,
+        scrollbar: true
+    });
    
 });

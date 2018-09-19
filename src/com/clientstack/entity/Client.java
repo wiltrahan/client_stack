@@ -1,7 +1,5 @@
 package com.clientstack.entity;
 
-
-
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -44,6 +42,14 @@ public class Client {
 	@Temporal(TemporalType.DATE)
 	@Column(name="nextAppt")
 	private Date nextAppt;
+	
+//	@Temporal(TemporalType.TIME)
+	@Column(name="startTime")
+	private String startTime;
+	
+//	@Temporal(TemporalType.TIME)
+	@Column(name="endTime")
+	private String endTime;
 	
 	public Client() {
 		
@@ -111,6 +117,22 @@ public class Client {
 
 	public void setNextAppt(Date nextAppt) {
 		this.nextAppt = nextAppt;
+	}
+	
+	public String getStartTime() {
+		return startTime;
+	}
+
+	public void setStartTime(String startTime) {
+		this.startTime = startTime;
+	}
+
+	public String getEndTime() {
+		return endTime;
+	}
+
+	public void setEndTime(String endTime) {
+		this.endTime = endTime;
 	}
 	
 }

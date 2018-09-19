@@ -23,12 +23,8 @@
 			src="${pageContext.request.contextPath}/resources/js/fullcalendar.js"/></script>
 	<script type="text/javascript" 
 			src="${pageContext.request.contextPath}/resources/js/myjQuery.js"/></script>
-		
 	
-
 </head>
-
-
 <body>
 	<nav class="navbar navbar-default custom-nav">
   		<div class="container-fluid">
