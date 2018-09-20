@@ -45,17 +45,21 @@
 			$('#calendar').fullCalendar({
 				
 				defaultView : 'basicWeek',
+				 
 				events: [
 					<c:forEach var="tempClient" items="${clients}">
 	    	    	{
 	    	    		id 	   : '${tempClient.id}',
 	    	      		title  : '${tempClient.firstName} ${tempClient.lastName}',
 	    	      		start  : '${tempClient.nextAppt}',
+	    	      		description : '${tempClient.startTime} -- ${tempClient.endTime}',
 	    	      		url: '${pageContext.request.contextPath}/client/showClient?clientId=' + '${tempClient.id}'
 	    	      	},
 	    	    	</c:forEach>
-	    	    ] 
-				
+	    	    ],
+	    	    eventRender: function(event, element) { 
+	                element.find('.fc-title').append("<br/>" + event.description); 
+	            } 
 	    	});	
 			
 		});
