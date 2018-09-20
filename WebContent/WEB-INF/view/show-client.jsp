@@ -28,7 +28,7 @@
     		<div class="navbar-header">
         		<a class="navbar-brand" href="${pageContext.request.contextPath}/client/list">Client Stack</a>
     		</div>
-    		<button class="btn btn-outline-success add-new-btn my-2 my-sm-0" onclick="window.location.href='calendar'; return false;">Calendar</button> 
+    		<button class="btn btn-outline-success add-new-btn my-2 my-sm-0 btn-outline-success-custom" onclick="window.location.href='calendar'; return false;">Calendar</button> 
   		</div>
 	</nav>
 	<div id="wrapper">

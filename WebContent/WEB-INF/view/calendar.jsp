@@ -31,7 +31,7 @@
     		<div class="navbar-header">
         		<a class="navbar-brand" href="${pageContext.request.contextPath}/client/list">Client Stack</a>
     		</div>
-    		<a href="${pageContext.request.contextPath}/client/list" class="btn btn-outline-success add-new-btn my-2 my-sm-0" role="button">Back To List</a>
+    		<a href="${pageContext.request.contextPath}/client/list" class="btn btn-outline-success add-new-btn my-2 my-sm-0 btn-outline-success-custom" role="button">Back To List</a>
   		</div>
 	</nav>
 	
@@ -57,6 +57,8 @@
 	    	      	},
 	    	    	</c:forEach>
 	    	    ],
+	    	    eventBackgroundColor: '#6ba58a',
+	    	    eventBorderColor: '#734B5E',
 	    	    eventRender: function(event, element) { 
 	                element.find('.fc-title').append("<br/>" + event.description); 
 	            } 

@@ -22,11 +22,11 @@
 					
 						<input type="text" name="theSearchName" class="form-control mr-sm-2" placeholder="Search"/>
 	
-						<button class="btn btn-outline-success search-btn my-2 my-sm-0" type="submit">Search</button>
+						<button class="btn btn-outline-success search-btn my-2 my-sm-0 btn-outline-success-custom" type="submit">Search</button>
 					
 				</form:form>
-				<button class="btn btn-outline-success add-new-btn my-2 my-sm-0" onclick="window.location.href='showFormForAdd'; return false;">Add New Client</button>
-				<button class="btn btn-outline-success add-new-btn my-2 my-sm-0" onclick="window.location.href='calendar'; return false;">Calendar</button>
+				<button class="btn btn-outline-success add-new-btn my-2 my-sm-0 btn-outline-success-custom" onclick="window.location.href='showFormForAdd'; return false;">Add New Client</button>
+				<button class="btn btn-outline-success add-new-btn my-2 my-sm-0 btn-outline-success-custom" onclick="window.location.href='calendar'; return false;">Calendar</button>
 								
 		</div>
 	</nav>

@@ -68,3 +68,14 @@ a.navbar-brand {
 #custom-thead {
 	box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.75);	
 }
+
+.btn-outline-success-custom {
+	border-color: #6ba58a;
+	transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn-outline-success-custom:hover {
+	
+	background-color: #6ba58a;
+}
+
