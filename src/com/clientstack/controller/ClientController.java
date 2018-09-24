@@ -33,13 +33,11 @@ public class ClientController {
 	@InitBinder
 	public void initBinder(WebDataBinder binder){
         SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
-//        SimpleDateFormat timeFormat = new SimpleDateFormat("hh:mm a");
         
         sdf.setTimeZone(TimeZone.getTimeZone("America/New_York"));
         sdf.setLenient(true);
         
         binder.registerCustomEditor(Date.class, new CustomDateEditor(sdf, true));
-//        binder.registerCustomEditor(Date.class, new CustomDateEditor(timeFormat, true));
     }
 
 	@GetMapping("/list")
